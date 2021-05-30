@@ -3,7 +3,11 @@ class Prototype < ApplicationRecord
   has_one_attached :image
   has_many :comments, dependent: :destroy
 
-  validates :concept, presence: true #バリデーション→一定の制約を掛けること。空のデータは保存できないなど
+  validates :title, presence: true
+  validates :catch_copy, presence: true
+  validates :concept, presence: true  
   validates :image, presence: true
+  #バリデーション→一定の制約を掛けること。空のデータは保存できないなど
+  
   
 end
